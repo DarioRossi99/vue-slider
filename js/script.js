@@ -6,8 +6,6 @@ const app = createApp({
     // la funzione data deve SEMPRE ritornare un oggetto
     return {
         currentIndexImage: 0,
-        currentIndexTitle: 0,
-        currentIndexText: 0,
         slides : [
             {
                 image: 'img/01.webp',
@@ -51,6 +49,10 @@ const app = createApp({
             this.currentIndexImage++;
             
         }
+    },
+    anteprima(clickImageIndex){
+        this.currentIndexImage === clickImageIndex;
+
     }
 
   }
