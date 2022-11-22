@@ -5,6 +5,9 @@ const app = createApp({
   data () {
     // la funzione data deve SEMPRE ritornare un oggetto
     return {
+        currentIndexImage: 0,
+        currentIndexTitle: 0,
+        currentIndexText: 0,
         slides : [
             {
                 image: 'img/01.webp',
@@ -31,11 +34,29 @@ const app = createApp({
     };
   },
   methods:{
+    goPrev(){
+        if(this.currentIndexImage -1 < 0){
+            this.currentIndexImage = this.slides.length -1;
+            
+        }else{
+            this.currentIndexImage--;
+            
+        }
+    },
+    goNext(){
+        if(this.currentIndexImage === this.slides.length -1){
+            this.currentIndexImage = 0;
+            
+        }else{
+            this.currentIndexImage++;
+            
+        }
+    }
 
   }
 }).mount("#app")
 
-console.log(slides);
+
 
  
 
