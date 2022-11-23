@@ -51,7 +51,7 @@ const app = createApp({
         }
     },
     anteprima(clickImageIndex){
-        this.currentIndexImage === clickImageIndex;
+        this.currentIndexImage = clickImageIndex;
 
     }
 
